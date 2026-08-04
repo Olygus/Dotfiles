@@ -1,0 +1,189 @@
+@import "gruvbox.rasi"
+@import "fonts.rasi"
+
+configuration {
+    modi:                 "drun,filebrowser";
+    show-icons:           true;
+    display-drun:         "";
+    display-run:          "";
+    display-filebrowser:  "";
+    display-window:       "";
+    drun-display-format:  "{name}";
+    window-format:        "{w} · {c} · {t}";
+}
+
+
+* {
+    /* Gruvbox accents */
+    aqua:        #8ec07c;
+    aqua-soft:   #689d6a;
+
+    /* Core palette */
+    bg:          #282828;
+    surface:     #32302f;
+    fg:          #ebdbb2;
+    fg-muted:    #928374;
+    yellow:      #fabd2f;
+
+    /* Borders + hover */
+    border-colour: @aqua;
+    border-soft:   #504945; 
+    hover-border:  #665c54;
+    hover:         #3c3836;
+
+    /* Striping (restored) */
+    row-normal: @bg;
+    row-alt:    @surface;
+
+    /* State colors */
+    background-colour: @bg;
+    foreground-colour: @fg;
+
+    normal-background:   @row-normal;
+    normal-foreground:   @fg;
+
+    alternate-normal-background: @row-alt;
+    alternate-normal-foreground: @fg;
+
+    urgent-background:   @yellow;
+    urgent-foreground:   @bg;
+
+    active-background:   @aqua-soft;
+    active-foreground:   @fg;
+
+    selected-normal-background:  @aqua;
+    selected-normal-foreground:  @bg;
+
+    selected-urgent-background:  @yellow;
+    selected-urgent-foreground:  @bg;
+
+    selected-active-background:  @aqua;
+    selected-active-foreground:  @bg;
+}
+
+window {
+    transparency:     "real";
+    location:         center;
+    anchor:           center;
+    width:            340px;
+    border:           0px;
+    background-color: @bg;
+}
+
+mainbox {
+    children:         [ "inputbar", "listview" ];
+    spacing:          14px;
+    padding:          22px;
+    border:           2px solid;
+    border-color:     @border-soft;
+    background-color: @bg;
+}
+
+inputbar {
+    children:         [ "entry" ];
+    padding:          2px 12px;
+    border:           1px solid;
+    border-color:     @aqua;
+    background-color: @surface;
+    text-color:       @foreground-colour;
+}
+
+textbox-prompt-colon {
+    enabled:          false;
+}
+
+entry {
+    background-color: @surface;
+    text-color:       @foreground-colour;
+    placeholder-color:@fg-muted;
+}
+
+listview {
+    lines:            7;
+    spacing:          6px;
+    background-color: @bg;
+    text-color:       @foreground-colour;
+    border:           0px;
+}
+
+element {
+    padding:          3px 10px;
+    border:           0px;
+    background-color: var(normal-background);
+    text-color:       @foreground-colour;
+}
+
+element normal.normal {
+    background-color: @row-normal;
+}
+
+element alternate.normal {
+    background-color: @row-alt;
+}
+
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+element normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element selected.normal {
+    border:           0px;
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element selected.urgent {
+    border:           0px;
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+element selected.active {
+    border:           0px;
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+element-icon {
+    size:             32px;
+}
+
+element-text {
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+}
+
+button {
+    padding:          6px 10px;
+    border:           1px solid;
+    border-color:     @border-soft;
+    background-color: @surface;
+}
+
+button selected {
+    border-color:     @hover-border;
+    background-color: @hover;
+    text-color:       @fg;
+}
+
+textbox {
+    padding:          8px 10px;
+    border:           1px solid;
+    border-color:     @border-soft;
+    background-color: @surface;
+    text-color:       @foreground-colour;
+    placeholder-color:@fg-muted;
+}
+
+error-message {
+    padding:          10px;
+    border:           1px solid;
+    border-color:     @yellow;
+    background-color: @background-colour;
+    text-color:       @foreground-colour;
+}

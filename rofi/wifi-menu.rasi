@@ -1,0 +1,59 @@
+@import "~/.config/rofi/config.rasi"
+
+window {
+    width: 760px;
+}
+
+mainbox {
+    padding: 22px;
+}
+
+inputbar {
+    border: 1px solid;
+    border-color: @aqua;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+    str: "";
+}
+
+entry {
+    padding: 0px;
+    placeholder: "select network...";
+}
+
+listview {
+    lines: 12;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px 10px;
+    border: 0px;
+}
+
+/* Fixes the default unselected rows */
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+/* Fixes the selected row */
+element selected.normal {
+    background-color: @aqua;
+    text-color:       @bg;
+}
+
+/* Forces text and icons inside to transparently show the background color */
+element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    horizontal-align: 0.0;
+}
+

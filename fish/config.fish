@@ -30,6 +30,12 @@ abbr vim nvim
 function ll
     lsd -l $argv
 end
+function la
+    lsd -A $argv
+end
+function lla
+    lsd -Al $argv
+end
 
 set -gx LS_COLORS "di=38;2;125;174;163:ex=38;2;234;105;98:ln=38;2;211;134;155:or=38;2;234;105;98:mi=38;2;234;105;98:fi=00:\
 *.tar=38;2;216;166;87:*.zip=38;2;216;166;87:*.gz=38;2;216;166;87:*.bz2=38;2;216;166;87:\
