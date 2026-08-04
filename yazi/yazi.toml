@@ -1,0 +1,140 @@
+[opener]
+# System fallback (Linux): useful for binaries, office files, etc.
+open = [
+  { run = 'xdg-open %s', orphan = true, desc = "Open (system)", for = "linux" },
+]
+
+# Editor (blocking, interactive)
+edit = [
+  { run = 'nvim %s', block = true, desc = "Edit with Neovim", for = "unix" },
+]
+
+rnote = [
+  { run = 'rnote %s', orphan = true, desc = "Open with RNote app", for = "linux" },
+]
+
+# Images (your choice: feh; note this is X11, kept as-is)
+image = [
+  { run = 'feh --geometry 800x600 --scale-down --auto-zoom %s', orphan = true, desc = "Open image (feh)", for = "unix" },
+]
+
+video = [
+  { run = 'vlc %s', orphan = true, desc = "Play video (VLC)", for = "unix" },
+]
+
+audio = [
+  { run = 'vlc %s', orphan = true, desc = "Play audio (VLC)", for = "unix" },
+]
+
+pdf = [
+  { run = 'zathura %s', orphan = true, desc = "View PDF (Zathura)", for = "unix" },
+]
+
+extract = [
+  { run = '7z x %s', desc = "Extract here (7z)", for = "unix" },
+]
+
+
+[open]
+rules = [
+  # 1) Special formats first (priority)
+  { mime = "application/pdf", use = "pdf" },
+  { url = "*.rnote", use = "rnote" },
+
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+  { mime = "audio/*", use = "audio" },
+
+  # Compressed files (by extension)
+  { url = "*.7z",     use = "extract" },
+  { url = "*.zip",    use = "extract" },
+  { url = "*.rar",    use = "extract" },
+  { url = "*.tar",    use = "extract" },
+  { url = "*.tgz",    use = "extract" },
+  { url = "*.tar.gz", use = "extract" },
+  { url = "*.tbz2",   use = "extract" },
+  { url = "*.tar.bz2",use = "extract" },
+  { url = "*.txz",    use = "extract" },
+  { url = "*.tar.xz", use = "extract" },
+
+  # 2) ALL text goes to nvim (your requirement)
+  { mime = "text/*", use = "edit" },
+
+  # Extra: "text-like" MIME types that sometimes do not match text/*
+  { mime = "application/json", use = "edit" },
+  { mime = "application/xml",  use = "edit" },
+  { mime = "application/x-yaml", use = "edit" },
+
+  # Common extensions that are usually text (if file(1)/MIME fails)
+  { url = "*.md",   use = "edit" },
+  { url = "*.markdown", use = "edit" },
+  { url = "*.txt",  use = "edit" },
+  { url = "*.text", use = "edit" },
+  { url = "*.rst",  use = "edit" },
+  { url = "*.adoc", use = "edit" },
+  { url = "*.org",  use = "edit" },
+  { url = "*.toml", use = "edit" },
+  { url = "*.yaml", use = "edit" },
+  { url = "*.yml",  use = "edit" },
+  { url = "*.json", use = "edit" },
+  { url = "*.jsonc", use = "edit" },
+  { url = "*.json5", use = "edit" },
+  { url = "*.xml",  use = "edit" },
+  { url = "*.html", use = "edit" },
+  { url = "*.htm",  use = "edit" },
+  { url = "*.css",  use = "edit" },
+  { url = "*.scss", use = "edit" },
+  { url = "*.sass", use = "edit" },
+  { url = "*.less", use = "edit" },
+  { url = "*.js",   use = "edit" },
+  { url = "*.jsx",  use = "edit" },
+  { url = "*.ts",   use = "edit" },
+  { url = "*.tsx",  use = "edit" },
+  { url = "*.mjs",  use = "edit" },
+  { url = "*.cjs",  use = "edit" },
+  { url = "*.vue",  use = "edit" },
+  { url = "*.svelte", use = "edit" },
+  { url = "*.ini",  use = "edit" },
+  { url = "*.conf", use = "edit" },
+  { url = "*.cfg",  use = "edit" },
+  { url = "*.log",  use = "edit" },
+  { url = "*.csv",  use = "edit" },
+  { url = "*.tsv",  use = "edit" },
+  { url = "*.env",  use = "edit" },
+  { url = "*.example", use = "edit" },
+  { url = "*.sh",   use = "edit" },
+  { url = "*.bash", use = "edit" },
+  { url = "*.zsh",  use = "edit" },
+  { url = "*.fish", use = "edit" },
+  { url = "*.py",   use = "edit" },
+  { url = "*.rb",   use = "edit" },
+  { url = "*.rs",   use = "edit" },
+  { url = "*.go",   use = "edit" },
+  { url = "*.java", use = "edit" },
+  { url = "*.kt",   use = "edit" },
+  { url = "*.c",    use = "edit" },
+  { url = "*.h",    use = "edit" },
+  { url = "*.cpp",  use = "edit" },
+  { url = "*.hpp",  use = "edit" },
+  { url = "*.sql",  use = "edit" },
+  { url = "*.lua",  use = "edit" },
+  { url = "*.vim",  use = "edit" },
+  { url = "*.plist", use = "edit" },
+  { url = "*.xhtml", use = "edit" },
+  { url = "*.svg",  use = "edit" },
+
+  # 3) Final fallback: if not text and no match, use system
+  { url = "*", use = "open" },
+]
+
+
+[mgr]
+sort_by = "mtime"
+sort_reverse = true
+
+
+[manager]
+show_hidden = true
+sort_by = "mtime"
+sort_reverse = true
+# Optional: show_symlink = true

@@ -1,0 +1,220 @@
+@define-color base #1d2021;
+@define-color surface0 #282828;
+@define-color surface1 #32302f;
+@define-color surface2 #3a3735;
+@define-color border #665c54;
+@define-color foreground #d4be98;
+@define-color muted #928374;
+
+@define-color green #a9b665;
+@define-color yellow #d8a657;
+@define-color red #ea6962;
+@define-color blue #7daea3;
+@define-color orange #e78a4e;
+@define-color purple #d3869b;
+@define-color aqua #89b482;
+
+* {
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", "Iosevka Nerd Font", monospace;
+  font-size: 15px;
+  font-weight: 500;
+  min-height: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+window#waybar {
+  background: @base;
+  color: @foreground;
+  border: 0;
+}
+
+#custom-vlc-prev,
+#custom-vlc-toggle,
+#custom-vlc-next,
+#custom-vpn,
+#custom-arch,
+#workspaces,
+#window,
+#network,
+#backlight,
+#pulseaudio,
+#custom-microphone,
+#battery,
+#memory,
+#tray,
+#clock,
+#custom-power {
+  background: @surface0;
+  color: @foreground;
+  border: 1px solid @border;
+  border-radius: 0;
+  margin: 4px 2px;
+  padding: 3px 8px;
+  min-height: 18px;
+}
+
+#custom-arch {
+  margin-left: 6px;
+  min-width: 18px;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-family:
+    "DejaVu Sans", "Noto Sans Symbols2", "Noto Sans Symbols", sans-serif;
+}
+
+#window {
+  margin-right: 7px;
+}
+
+#custom-vpn {
+  margin-left: 7px;
+}
+
+#network {
+  margin-left: 7px;
+}
+
+#custom-power {
+  margin-right: 6px;
+  min-width: 18px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+
+#workspaces {
+  padding: 0;
+}
+
+#workspaces button {
+  background: transparent;
+  color: @muted;
+  border: 1px solid @border;
+  border-radius: 0;
+  margin: 0;
+  padding: 3px 8px;
+}
+
+#workspaces button:hover {
+  background: @surface1;
+  color: @foreground;
+}
+
+#workspaces button.active {
+  background: @surface2;
+  color: @foreground;
+  border-color: @aqua;
+}
+
+#workspaces button.urgent {
+  background: transparent;
+  color: @red;
+  border-color: @red;
+}
+
+#custom-arch:hover,
+#window:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#memory:hover,
+#tray:hover,
+#clock:hover,
+#custom-vlc-prev:hover,
+#custom-vlc-toggle:hover,
+#custom-vlc-next:hover {
+   background: @surface1;
+ }
+#custom-power:hover {
+  background: @surface1;
+}
+
+#backlight:hover,
+#custom-microphone:hover {
+  background: @surface0;
+}
+
+#pulseaudio.muted {
+  color: @muted;
+}
+
+#custom-microphone.unmuted {
+  color: @foreground;
+}
+
+#custom-microphone.muted {
+  color: @muted;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+}
+
+#temperature.warning,
+#cpu.warning,
+#memory.warning {
+  color: @yellow;
+}
+
+#temperature.critical,
+#cpu.critical,
+#memory.critical {
+  color: @red;
+}
+
+#tray > .passive,
+#tray > .needs-attention {
+  -gtk-icon-effect: none;
+}
+
+tooltip {
+  background: @surface0;
+  color: @foreground;
+  border: 1px solid @border;
+  border-radius: 0;
+  padding: 4px 6px;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
+#custom-vpn:hover {
+  background: @surface1;
+}
+
+#custom-vpn.connected {
+  color: @green;
+}
+
+#custom-vpn.disconnected {
+  color: @red;
+}
+/* #custom-vlc-next { */
+/* color: @green; */
+/* } */
+

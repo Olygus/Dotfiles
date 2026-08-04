@@ -1,0 +1,45 @@
+# cache & browser bloat
+0ad/
+Electron/
+mozilla/
+pulse/
+dconf/
+obsidian/
+go/
+ruffle/
+flutter/
+procps/
+Proton/
+spotdl/
+menus/
+nautilus/
+QtProject/
+kdeconnect/*
+!kdeconnect/*/
+kdeconnect/*/*
+
+# apps completely ignored
+vesktop/
+vlc/
+net.imput.helium/
+Code - OSS/
+libreoffice/
+mimeapps.list
+pavucontrol.ini
+
+# security & credentials
+VPN/
+proton-auth.txt
+gh/hosts.yml
+
+# copilot & qt
+github-copilot/
+QtProject.conf
+Kvantum/
+
+# systemd temporary runtime states & noise
+systemd/user/generator*
+Sandbox Interactive GmbH/
+unity3d/
+xdg-desktop-portal/
+Thunar/accels.scm
