@@ -288,10 +288,25 @@ hl.bind(mainMod .. " + " .. "up", hl.dsp.focus({ direction = "up" }))
 
 hl.bind(mainMod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
 
--- Move focus to the previus workspaces
+-- move forward workspace (+1), capped at 10
+hl.bind(mainMod .. " + Tab", function()
+	local current = hl.get_active_workspace().id
+	if current >= 10 then
+		hl.dispatch(hl.dsp.focus({ workspace = 1 }))
+	else
+		hl.dispatch(hl.dsp.focus({ workspace = "r+1" }))
+	end
+end)
 
-hl.bind(mainMod .. " + " .. "Tab", hl.dsp.focus({ workspace = "r+1" }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "Tab", hl.dsp.focus({ workspace = "r-1" }))
+-- move backward workspace (-1), capped at 1
+hl.bind(mainMod .. " + SHIFT + Tab", function()
+	local current = hl.get_active_workspace().id
+	if current <= 1 then
+		hl.dispatch(hl.dsp.focus({ workspace = 10 }))
+	else
+		hl.dispatch(hl.dsp.focus({ workspace = "r-1" }))
+	end
+end)
 
 -- Switch workspaces with mainMod + [0-9]
 
