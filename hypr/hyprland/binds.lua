@@ -64,9 +64,12 @@ return function(shared)
     exec("F4", "setsid sh ~/.local/bin/toggle-mic.sh >/dev/null 2>&1 &")
     exec("XF86MonBrightnessUp", "brightnessctl set 5%+")
     exec("XF86MonBrightnessDown", "brightnessctl set 5%-")
+<<<<<<< HEAD
 
     bind(mainMod .. " + " .. "H", hl.dsp.window.move({ direction = "l" }))
     bind(mainMod .. " + " .. "L", hl.dsp.window.move({ direction = "r" }))
     bind(mainMod .. " + " .. "K", hl.dsp.window.move({ direction = "u" }))
     bind(mainMod .. " + " .. "J", hl.dsp.window.move({ direction = "d" }))
+=======
+>>>>>>> f3edea1e3181a3ddd9a866b3f73bb3eb0e757a9b
 end
