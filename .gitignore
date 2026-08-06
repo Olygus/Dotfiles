@@ -31,6 +31,12 @@ pavucontrol.ini
 VPN/
 proton-auth.txt
 gh/hosts.yml
+obs-studio/plugin_config/obs-websocket/config.json
+
+# obs runtime noise
+obs-studio/logs/
+obs-studio/profiler_data/
+obs-studio/plugin_manager/
 
 # copilot & qt
 github-copilot/
