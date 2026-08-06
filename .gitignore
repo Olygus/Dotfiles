@@ -32,6 +32,7 @@ VPN/
 proton-auth.txt
 gh/hosts.yml
 obs-studio/plugin_config/obs-websocket/config.json
+school.html
 
 # obs runtime noise
 obs-studio/logs/
