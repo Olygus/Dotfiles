@@ -72,8 +72,8 @@ hl.config({
 	},
 	general = {
 		-- See https://wiki.hyprland.org/Configuring/Variables/ for more
-		gaps_in = 1,
-		gaps_out = 2,
+		gaps_in = 0,
+		gaps_out = 0,
 		border_size = 2,
 		["col.active_border"] = "rgb(89b482)",
 		["col.inactive_border"] = "rgb(d3c6aa)",
@@ -290,7 +290,8 @@ hl.bind(mainMod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
 
 -- Move focus to the previus workspaces
 
-hl.bind(mainMod .. " + " .. "Tab", hl.dsp.focus({ workspace = "previus" }))
+hl.bind(mainMod .. " + " .. "Tab", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "Tab", hl.dsp.focus({ workspace = "r-1" }))
 
 -- Switch workspaces with mainMod + [0-9]
 
