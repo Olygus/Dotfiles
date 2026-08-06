@@ -50,3 +50,22 @@ Sandbox Interactive GmbH/
 unity3d/
 xdg-desktop-portal/
 Thunar/accels.scm
+
+# common sensativities
+*.pem
+*.key
+.env*
+id_rsa*
+
+# shell anfd stuff
+fish/fish_variables
+fish_variables
+uv/
+
+# backups and temps (so they dont end up being perminents)
+*.bak
+*.tmp
+*.log
+*.csv.gz
+yazi/*-[0-9]*
+fish/fish_variables
