@@ -20,6 +20,7 @@ appstream 1.1.5-1
 aquamarine 0.14.0-1
 archlinux-keyring 20260727-1
 argon2 20190702-6
+at 3.2.5-5
 at-spi2-core 2.60.6-1
 atkmm 2.28.5-2
 attr 2.6.0-1
@@ -131,8 +132,10 @@ gettext 1.0-2
 giflib 6.1.3-2
 girara 2026.07.18-1
 git 2.55.0-1
+git-filter-repo 2.47.0-3
 git-lfs 3.7.1-1
 github-cli 2.97.0-1
+gitleaks 8.30.1-1
 glib-networking 1:2.80.1-1
 glib2 2.88.3-1
 glib2-devel 2.88.3-1
@@ -235,12 +238,9 @@ kcodecs 6.28.0-1
 kcolorscheme 6.28.0-1
 kcompletion 6.28.0-1
 kconfig 6.28.0-1
-kcontacts 1:6.28.0-1
 kcoreaddons 6.28.0-1
 kcrash 6.28.0-1
 kdbusaddons 6.28.0-1
-kdeclarative 6.28.0-1
-kdeconnect 26.04.3-1
 keyutils 1.6.3-4
 kglobalaccel 6.28.0-1
 kguiaddons 6.28.0-1
@@ -257,10 +257,8 @@ kitty-terminfo 0.48.2-1
 kjobwidgets 6.28.0-1
 kmod 34.2-1
 knotifications 6.28.0-1
-kpeople 6.28.0-1
 krb5 1.22.2-1
 kservice 6.28.0-1
-kstatusnotifieritem 6.28.0-1
 ksvg 6.28.0-1
 kwallet 6.28.0-1
 kwidgetsaddons 6.28.0-1
@@ -413,7 +411,6 @@ libevdev 1.13.6-1
 libevent 2.1.13-2
 libexif 0.6.26-1
 libexttextcat 3.4.8-1
-libfakekey 0.3-4
 libfdk-aac 2.0.3-2
 libffi 3.7.1-1
 libfontenc 1.1.9-1
@@ -455,7 +452,6 @@ libmakepkg-dropins 20-1
 libmalcontent 0.14.0-4
 libmanette 0.2.13-2
 libmatroska 1.7.2-2
-libmbim 1.34.0-1
 libmd 1.2.0-1
 libmilter 8.18.2-1
 libmm-glib 1.24.2-1
@@ -505,8 +501,6 @@ libpng 1.6.58-2
 libproxy 0.5.12-1
 libpsl 0.21.5-2
 libpulse 17.0+r98+gb096704c0-1
-libqmi 1.38.0-1
-libqrtr-glib 1.4.0-1
 libquadmath 16.1.1+r595+g171d15ac6959-1
 libqxp 0.0.3-1
 libraw1394 2.1.2-4
@@ -653,8 +647,6 @@ minizip 1:1.3.2-3
 mkinitcpio 41-4
 mkinitcpio-busybox 1.36.1-1
 mobile-broadband-provider-info 20251101-1
-modemmanager 1.24.2-1
-modemmanager-qt 6.28.0-1
 mpdecimal 4.0.1-3
 mpfr 4.2.2-1
 mpg123 1.33.5-1
@@ -733,13 +725,11 @@ poppler 26.07.0-1
 poppler-glib 26.07.0-1
 popt 1.19-2
 portaudio 1:19.7.0-4
-ppp 2.5.3-1
 pps-tools 1.0.3-2
 procps-ng 4.0.6-3
 protobuf 35.1-1
 psmisc 23.7-2
 pugixml 1.16-1
-pulseaudio-qt 1.8.1-1
 python 3.14.6-1
 python-attrs 26.1.0-1
 python-cairo 1.29.0-2
@@ -772,7 +762,6 @@ qt5-x11extras 5.15.19-1
 qt5ct 1.9-2
 qt6-5compat 6.11.1-1
 qt6-base 6.11.1-1
-qt6-connectivity 6.11.1-1
 qt6-declarative 6.11.1-3
 qt6-multimedia 6.11.1-1
 qt6-multimedia-ffmpeg 6.11.1-1

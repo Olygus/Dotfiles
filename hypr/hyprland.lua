@@ -10,10 +10,10 @@ local module_dir = config_dir .. "/hyprland"
 local shared = {}
 
 local function load(module_name)
-    local module = dofile(module_dir .. "/" .. module_name)
-    if type(module) == "function" then
-        module(shared)
-    end
+	local module = dofile(module_dir .. "/" .. module_name)
+	if type(module) == "function" then
+		module(shared)
+	end
 end
 
 load("programs.lua")
