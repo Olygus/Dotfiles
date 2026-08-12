@@ -13,9 +13,8 @@ rnote = [
   { run = 'rnote %s', orphan = true, desc = "Open with RNote app", for = "linux" },
 ]
 
-# Images (your choice: feh; note this is X11, kept as-is)
 image = [
-  { run = 'feh --geometry 800x600 --scale-down --auto-zoom %s', orphan = true, desc = "Open image (feh)", for = "unix" },
+  { run = 'loupe "$1"', orphan = true, desc = "Open image (Loupe)", for = "unix" },
 ]
 
 video = [
