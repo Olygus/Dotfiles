@@ -14,7 +14,7 @@ rnote = [
 ]
 
 image = [
-  { run = 'loupe "$1"', orphan = true, desc = "Open image (Loupe)", for = "unix" },
+    { run = 'loupe "$@"', orphan = true, desc = "Open image (Loupe)", for = "unix" }
 ]
 
 video = [
