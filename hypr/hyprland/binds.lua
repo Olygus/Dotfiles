@@ -43,8 +43,21 @@ return function(shared)
 	end)
 	bind(mainMod .. " + " .. "SHIFT" .. " + " .. "S", hl.dsp.window.move({ workspace = "special:scratchpad" }))
 
-	bind(mainMod .. " + " .. "Tab", hl.dsp.focus({ workspace = "r+1" }))
-	bind(mainMod .. " + " .. "SHIFT" .. " + " .. "Tab", hl.dsp.focus({ workspace = "r-1" }))
+	local WORKSPACE_COUNT = 9
+
+	local function cycle_workspace(step)
+		return function()
+			local current = hl.get_active_workspace().id
+			if current < 1 or current > WORKSPACE_COUNT then
+				current = 1
+			end
+			local next_ws = ((current - 1 + step) % WORKSPACE_COUNT) + 1
+			hl.dispatch(hl.dsp.focus({ workspace = next_ws }))
+		end
+	end
+
+	bind(mainMod .. " + " .. "Tab", cycle_workspace(1))
+	bind(mainMod .. " + " .. "SHIFT" .. " + " .. "Tab", cycle_workspace(-1))
 
 	bind(mainMod .. " + " .. "mouse:272", hl.dsp.window.drag(), { mouse = true })
 	bind(mainMod .. " + " .. "mouse:273", hl.dsp.window.resize(), { mouse = true })
