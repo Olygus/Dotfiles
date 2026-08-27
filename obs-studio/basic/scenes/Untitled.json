@@ -1,7 +1,7 @@
 {
     "name": "Untitled",
     "DesktopAudioDevice1": {
-        "prev_ver": 537001985,
+        "prev_ver": 537001986,
         "name": "Desktop Audio",
         "uuid": "8d27184d-b53c-432a-9641-d0e7df339410",
         "id": "pulse_output_capture",
@@ -32,7 +32,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 537001985,
+        "prev_ver": 537001986,
         "name": "Mic/Aux",
         "uuid": "a532b1eb-751c-4ef4-ae98-0b4167096006",
         "id": "pulse_input_capture",
@@ -64,7 +64,7 @@
     },
     "sources": [
         {
-            "prev_ver": 537001985,
+            "prev_ver": 537001986,
             "name": "Screen Capture (PipeWire)",
             "uuid": "98a534f6-22ea-4f09-886e-c466272954c5",
             "id": "pipewire-screen-capture-source",
@@ -90,7 +90,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 537001985,
+            "prev_ver": 537001986,
             "name": "Video Capture Device (V4L2)",
             "uuid": "a8bc5807-3ef9-4388-87d8-bfa514362077",
             "id": "v4l2_input",
@@ -118,13 +118,13 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 537001985,
+            "prev_ver": 537001986,
             "name": "screen",
             "uuid": "423d994f-55f5-44d6-9d5d-d4f9cf2c90ec",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 3,
+                "id_counter": 4,
                 "custom_size": false,
                 "items": [
                     {
@@ -181,6 +181,61 @@
                             "duration": 300
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Video Capture Device (V4L2)",
+                        "source_uuid": "a8bc5807-3ef9-4388-87d8-bfa514362077",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.22499999403953552,
+                            "y": 0.22499999403953552
+                        },
+                        "scale_rel": {
+                            "x": 0.22499999403953552,
+                            "y": 0.22499999403953552
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -198,7 +253,9 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.2": [],
-                "libobs.hide_scene_item.2": []
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -207,7 +264,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 537001985,
+            "prev_ver": 537001986,
             "name": "camera",
             "uuid": "cc653c9e-7780-48da-a52d-9603049a6f4e",
             "id": "scene",
