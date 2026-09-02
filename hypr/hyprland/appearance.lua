@@ -41,4 +41,12 @@ return function()
 
 	hl.curve("outQuint", { type = "bezier", points = { { 0.22, 1.00 }, { 0.36, 1.00 } } })
 	hl.curve("inOutCubic", { type = "bezier", points = { { 0.65, 0.00 }, { 0.35, 1.00 } } })
+
+	hl.config({
+		misc = {
+			force_default_wallpaper = 0,
+			disable_hyprland_logo = true,
+			disable_splash_rendering = true,
+		},
+	})
 end
