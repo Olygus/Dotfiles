@@ -34,7 +34,7 @@ proton-auth.txt
 gh/hosts.yml
 obs-studio/plugin_config/obs-websocket/config.json
 school.html
-hyprlock.conf
+hypr/hyprlock.conf
 
 # obs runtime noise
 obs-studio/logs/
