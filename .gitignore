@@ -45,6 +45,7 @@ obs-studio/plugin_manager/
 github-copilot/
 QtProject.conf
 Kvantum/
+fish/completions/*
 
 # systemd temporary runtime states & noise
 systemd/user/generator*
