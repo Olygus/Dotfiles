@@ -1,5 +1,14 @@
 #!/bin/bash
-PERCENT=$(upower -i /org/freedesktop/UPower/devices/battery_wacom_battery_0 | grep "percentage:" | awk '{print $2}' | tr -d '%')
+
+#PERCENT=$(upower -i /org/freedesktop/UPower/devices/battery_wacom_battery_0 | grep "percentage:" | awk '{print $2}' | tr -d '%')
+#secound iteration, if this fails, revert to previous and manuallu update battery_wacom_battery_0 to match
+for device in $(upower -e | grep "battery_wacom_battery_"); do
+    VAL=$(upower -i "$device" | grep "percentage:" | awk '{print $2}' | tr -d '%')
+    if [ -n "$VAL" ] && [ "$VAL" -gt 0 ]; then
+        PERCENT=$VAL
+        break
+    fi
+done
 
 if [ -z "$PERCENT" ]; then
     exit 0
