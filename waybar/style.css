@@ -41,6 +41,7 @@ window#waybar {
 #backlight,
 #pulseaudio,
 #custom-microphone,
+#custom-wacom,
 #battery,
 #memory,
 #tray,
@@ -127,6 +128,7 @@ window#waybar.empty #window {
 #window:hover,
 #network:hover,
 #pulseaudio:hover,
+#custom-wacom:hover,
 #battery:hover,
 #memory:hover,
 #tray:hover,
@@ -213,6 +215,15 @@ tooltip label {
 
 #custom-vpn.disconnected {
   color: @red;
+}
+#custom-wacom.warning {
+  color: @yellow;
+}
+#custom-wacom.critical {
+  color: @red;
+}
+#custom-wacom.normal {
+  color: @foreground;
 }
 /* #custom-vlc-next { */
 /* color: @green; */
