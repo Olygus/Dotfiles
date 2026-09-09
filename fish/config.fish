@@ -22,6 +22,9 @@ abbr vim nvim
 function ll
     lsd -l $argv
 end
+function lls
+    lsd -l $argv
+end
 function la
     lsd -A $argv
 end
