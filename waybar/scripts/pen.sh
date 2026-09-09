@@ -10,43 +10,40 @@ for device in $(upower -e | grep "battery_wacom_battery_"); do
     fi
 done
 
-if [ -z "$PERCENT" ]; then
-    exit 0
-fi
-
-if [ "$PERCENT" -le 10 ]; then
+if [[ -n "$PERCENT" && "$PERCENT" -le 10 ]]; then
     CLASS="critical"
     ICON="󰁺"
-elif [ "$PERCENT" -le 20 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 20 ]]; then
     CLASS="critical"
     ICON="󰁻"
-elif [ "$PERCENT" -le 30 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 30 ]]; then
     CLASS="critical"
     ICON="󰁼"
-elif [ "$PERCENT" -le 40 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 40 ]]; then
     CLASS="warning"
     ICON="󰁽"
-elif [ "$PERCENT" -le 50 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 50 ]]; then
     CLASS="warning"
     ICON="󰁾"
-elif [ "$PERCENT" -le 60 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 60 ]]; then
     CLASS="warning"
     ICON="󰁿"
-elif [ "$PERCENT" -le 70 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 70 ]]; then
     CLASS="warning"
     ICON="󰂀"
-elif [ "$PERCENT" -le 80 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 80 ]]; then
     CLASS="normal"
     ICON="󰂁"
-elif [ "$PERCENT" -le 90 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 90 ]]; then
     CLASS="normal"
     ICON="󰂂"
-elif [ "$PERCENT" -le 100 ]; then
+elif [[ -n "$PERCENT" && "$PERCENT" -le 100 ]]; then
     CLASS="normal"
     ICON="󰁹"
 else
-    CLASS="normal"
+    CLASS="warning"
     ICON="󰷤"
+    SHOW_PERCENT="false"
 fi
 
 echo "{\"text\": \"$ICON $PERCENT%\", \"tooltip\": \"charge: $PERCENT%\", \"class\": \"$CLASS\"}"
