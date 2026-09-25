@@ -1,45 +1,73 @@
+# bg (transparent)
+set notification-error-bg       "rgba(29,32,33,0.85)"
+# bright:red
+set notification-error-fg       "rgba(251,73,52,1)"
+# bg (transparent)
+set notification-warning-bg     "rgba(29,32,33,0.85)"
+# bright:yellow
+set notification-warning-fg     "rgba(250,189,47,1)"
+# bg (transparent)
+set notification-bg             "rgba(29,32,33,0.85)"
+# bright:green
+set notification-fg             "rgba(184,187,38,1)"
 
-set notification-error-bg       "rgba(29,32,33,0.85)"   # bg (transparent)
-set notification-error-fg       "rgba(251,73,52,1)"     # bright:red
-set notification-warning-bg     "rgba(29,32,33,0.85)"   # bg (transparent)
-set notification-warning-fg     "rgba(250,189,47,1)"    # bright:yellow
-set notification-bg             "rgba(29,32,33,0.85)"   # bg (transparent)
-set notification-fg             "rgba(184,187,38,1)"    # bright:green
-
-set completion-bg               "rgba(80,73,69,0.85)"   # bg2 (transparent)
-set completion-fg               "rgba(235,219,178,1)"   # fg
-set completion-group-bg         "rgba(60,56,54,0.85)"   # bg1 (transparent)
-set completion-group-fg         "rgba(146,131,116,1)"   # gray
-set completion-highlight-bg     "rgba(131,165,152,0.85)"# bright:blue (transparent)
-set completion-highlight-fg     "rgba(80,73,69,1)"      # bg2
+# bg2 (transparent)
+set completion-bg               "rgba(80,73,69,0.85)"
+# fg
+set completion-fg               "rgba(235,219,178,1)"
+# bg1 (transparent)
+set completion-group-bg         "rgba(60,56,54,0.85)"
+# gray
+set completion-group-fg         "rgba(146,131,116,1)"
+# bright:blue (transparent)
+set completion-highlight-bg     "rgba(131,165,152,0.85)"
+# bg2
+set completion-highlight-fg     "rgba(80,73,69,1)"
 
 # define the color in index mode
-set index-bg                    "rgba(80,73,69,0.85)"   # bg2 (transparent)
-set index-fg                    "rgba(235,219,178,1)"   # fg
-set index-active-bg             "rgba(131,165,152,0.85)"# bright:blue (transparent)
-set index-active-fg             "rgba(80,73,69,1)"      # bg2
+# bg2 (transparent)
+set index-bg                    "rgba(80,73,69,0.85)"
+# fg
+set index-fg                    "rgba(235,219,178,1)"
+# bright:blue (transparent)
+set index-active-bg             "rgba(131,165,152,0.85)"
+# bg2
+set index-active-fg             "rgba(80,73,69,1)"
 
-set inputbar-bg                 "rgba(29,32,33,0.85)"   # bg (transparent)
-set inputbar-fg                 "rgba(235,219,178,1)"   # fg
+# bg (transparent)
+set inputbar-bg                 "rgba(29,32,33,0.85)"
+# fg
+set inputbar-fg                 "rgba(235,219,178,1)"
 
-set statusbar-bg                "rgba(80,73,69,0.85)"   # bg2 (transparent)
-set statusbar-fg                "rgba(235,219,178,1)"   # fg
+# bg2 (transparent)
+set statusbar-bg                "rgba(80,73,69,0.85)"
+# fg
+set statusbar-fg                "rgba(235,219,178,1)"
 
-set highlight-color             "rgba(250,189,47,0.5)"  # bright:yellow
-set highlight-active-color      "rgba(254,128,25,0.5)"  # bright:orange
+# bright:yellow
+set highlight-color             "rgba(250,189,47,0.5)"
+# bright:orange
+set highlight-active-color      "rgba(254,128,25,0.5)"
 
-set default-bg                  "rgba(29,32,33,0.85)"   # bg (transparent)
-set default-fg                  "rgba(235,219,178,1)"   # fg
+# bg (transparent)
+set default-bg                  "rgba(29,32,33,0.85)"
+# fg
+set default-fg                  "rgba(235,219,178,1)"
 set render-loading              true
-set render-loading-bg           "rgba(29,32,33,0.85)"   # bg (transparent)
-set render-loading-fg           "rgba(235,219,178,1)"   # fg
+# bg (transparent)
+set render-loading-bg           "rgba(29,32,33,0.85)"
+# fg
+set render-loading-fg           "rgba(235,219,178,1)"
 
 # recolor book content's color
 # note: changing recolor to "true" turns on the transparent document background
 set recolor                     "false"                  
-set recolor-lightcolor          "rgba(29,32,33,0.30)"   # bg (transparent)
-set recolor-darkcolor           "rgba(235,219,178,1)"   # fg
-set recolor-keephue             "false"                  # keep original color
+# bg (transparent)
+set recolor-lightcolor          "rgba(29,32,33,0.30)"
+# fg
+set recolor-darkcolor           "rgba(235,219,178,1)"
+# keep original color
+set recolor-keephue             "false"                  
 
 set selection-clipboard         "clipboard"
 # unmap ctrl-n
