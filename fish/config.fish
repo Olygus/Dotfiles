@@ -34,8 +34,9 @@ end
 function kys
     shutdown now $argv
 end
-function math
-    zathura School/Year\ 12/forumal-sheet-math.pdf
+function form
+    setsid -f zathura "$HOME/School/Year 12/forumal-sheet-math.pdf" </dev/null >/dev/null 2>&1
+    exit
 end
 
 set -gx LS_COLORS "di=38;2;125;174;163:ex=38;2;234;105;98:ln=38;2;211;134;155:or=38;2;234;105;98:mi=38;2;234;105;98:fi=00:\
