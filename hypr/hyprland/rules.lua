@@ -29,7 +29,7 @@ return function()
 		name = "steam-friends-size",
 		match = {
 			class = "steam",
-			title = "Friends List",
+			title = "friends list",
 		},
 		size = "30% 100%",
 	})
@@ -37,7 +37,7 @@ return function()
 		name = "steam-main-size",
 		match = {
 			class = "steam",
-			title = "Steam",
+			title = "steam",
 		},
 		size = "70% 100%",
 	})
@@ -58,7 +58,7 @@ return function()
 	})
 
 	hl.window_rule({
-		match = { class = "^(Spotify)$" },
+		match = { class = "^(spotify)$" },
 		opacity = 0.75,
 	})
 
@@ -78,7 +78,7 @@ return function()
 	})
 
 	hl.window_rule({
-		match = { class = "^(Code)$" },
+		match = { class = "^(code)$" },
 		opacity = 0.90,
 	})
 	hl.window_rule({
@@ -91,7 +91,7 @@ return function()
 	hl.window_rule({
 		name = "simple-scan-float",
 		match = {
-			class = "org.gnome.SimpleScan",
+			class = "org.gnome.simplescan",
 		},
 		float = true,
 		center = true,
@@ -128,7 +128,7 @@ return function()
 	})
 	hl.window_rule({
 		name = "obsidian-settings-float",
-		match = { class = ".*obsidian.*", title = ".*Settings.*" },
+		match = { class = ".*obsidian.*", title = ".*settings.*" },
 		float = true,
 		size = "950 650",
 		center = true,
@@ -136,7 +136,7 @@ return function()
 
 	hl.window_rule({
 		name = "obsidian-recovery-float",
-		match = { class = ".*obsidian.*", title = ".*Recovery.*" },
+		match = { class = ".*obsidian.*", title = ".*recovery.*" },
 		float = true,
 		size = "950 650",
 		center = true,
@@ -144,7 +144,7 @@ return function()
 
 	hl.window_rule({
 		name = "obsidian-plugins-float",
-		match = { class = ".*obsidian.*", title = ".*Plugins.*" },
+		match = { class = ".*obsidian.*", title = ".*plugins.*" },
 		float = true,
 		size = "950 650",
 		center = true,
@@ -152,20 +152,20 @@ return function()
 
 	hl.window_rule({
 		name = "steam-main-size",
-		match = { class = ".*steam.*", title = ".*Steam.*" },
+		match = { class = ".*steam.*", title = ".*steam.*" },
 		size = "70% 100%",
 	})
 
 	hl.window_rule({
 		name = "steam-friends-size",
-		match = { class = ".*steam.*", title = ".*Friends.*" },
+		match = { class = ".*steam.*", title = ".*friends.*" },
 		float = true,
 		size = "30% 100%",
 	})
 
 	hl.window_rule({
 		name = "steam-settings-float",
-		match = { class = ".*steam.*", title = ".*Settings.*" },
+		match = { class = ".*steam.*", title = ".*settings.*" },
 		float = true,
 		size = "900 650",
 		center = true,
@@ -173,7 +173,7 @@ return function()
 
 	hl.window_rule({
 		name = "steam-updater-float",
-		match = { class = ".*steam.*", title = ".*Updater.*" },
+		match = { class = ".*steam.*", title = ".*updater.*" },
 		float = true,
 		size = "900 650",
 		center = true,
@@ -181,7 +181,7 @@ return function()
 
 	hl.window_rule({
 		name = "steam-screenshot-float",
-		match = { class = ".*steam.*", title = ".*Screenshot.*" },
+		match = { class = ".*steam.*", title = ".*screenshot.*" },
 		float = true,
 		size = "900 650",
 		center = true,
@@ -189,7 +189,7 @@ return function()
 
 	hl.window_rule({
 		name = "steam-chat-float",
-		match = { class = ".*steam.*", title = ".*Chat.*" },
+		match = { class = ".*steam.*", title = ".*chat.*" },
 		float = true,
 		size = "900 650",
 		center = true,
@@ -197,9 +197,16 @@ return function()
 
 	hl.window_rule({
 		name = "steam-nonsteam-float",
-		match = { class = ".*steam.*", title = ".*Add Non%-Steam.*" },
+		match = { class = ".*steam.*", title = ".*add non%-steam.*" },
 		float = true,
 		size = "900 650",
+		center = true,
+	})
+	hl.window_rule({
+		name = "whatsapp-pwa-float",
+		match = { class = "^(whatsapp-pwa)$" },
+		float = true,
+		size = "750 550",
 		center = true,
 	})
 end
