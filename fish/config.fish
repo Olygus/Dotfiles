@@ -14,7 +14,7 @@ set -x MOZ_ENABLE_WAYLAND 1
 set -x GTK_THEME Adwaita:dark
 
 abbr zath 'setsid zathura'
-abbr see loupe
+abbr see viewnior
 abbr anydesk "flatpak run com.anydesk.Anydesk > /dev/null 2>&1 & disown"
 abbr flash "flatpak run com.adobe.Flash-Player-Projector > /dev/null 2>&1 & disown; kill -9 \$fish_pid"
 abbr vim nvim
